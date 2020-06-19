@@ -1964,7 +1964,6 @@
     "icon": "row.png",
     "version":"0.01",
     "description": "Rowing Pace",
-    "allow_emulator":true,
     "storage": [
       {"name":"banglerow.app.js","url":"app.js"},
       {"name":"banglerow.img","url":"app-icon.js","evaluate":true}
