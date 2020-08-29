@@ -20,9 +20,11 @@ function getData() {
   dataElement.innerHTML = "";
   Util.readStorageFile(`accel.csv`,data=>{
     Util.hideModal();
+    console.log(data)
     csvContent+=data.trim();
 });
 var encodedUri = encodeURI(csvContent);
+console.log(encodedUri)
 window.open(encodedUri);
 }
 
