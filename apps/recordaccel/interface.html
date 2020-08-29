@@ -13,6 +13,7 @@ var dataElement = document.getElementById("data");
 var csvData = "";
 
 function getData() {
+  let csvContent = "data:text/csv;charset=utf-8,";
   // show loading window
   Util.showModal("Loading...");
   // get the data
@@ -22,7 +23,7 @@ function getData() {
     // remove window
     Util.hideModal();
     // If no data, report it and exit
-    let csvContent = "data:text/csv;charset=utf-8,";
+
     data.trim().split("\n").forEach(l=>{
       csvContent += l + "\n";
     });
