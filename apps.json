@@ -1949,7 +1949,7 @@
   { "id": "recordaccel",
     "name": "Record acceleration",
     "shortName":"Record acceleration",
-    "icon": "app.png",
+    "icon": "recordaccel.png",
     "version":"0.01",
     "description": "Record acceleration",
     "tags": "outdoors",
