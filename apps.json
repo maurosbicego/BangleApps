@@ -1946,6 +1946,19 @@
       {"name":"gpspoilog.img","url":"app-icon.js","evaluate":true}
     ]
   },
+  { "id": "recordaccel",
+    "name": "Record acceleration",
+    "shortName":"Record acceleration",
+    "icon": "app.png",
+    "version":"0.01",
+    "description": "Record acceleration",
+    "tags": "outdoors",
+    "interface": "interface.html",
+    "storage": [
+      {"name":"recordaccel.app.js","url":"app.js"},
+      {"name":"recordaccel.img","url":"app-icon.js","evaluate":true}
+    ]
+  },
   { "id": "miclock2",
     "name": "Mixed Clock 2",
     "icon": "clock-mixed.png",
