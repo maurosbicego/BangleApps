@@ -14,12 +14,9 @@ var csvData = "";
 
 function getData() {
   let csvContent = "data:text/csv;charset=utf-8,";
-  // show loading window
-  Util.showModal("Loading...");
-  // get the data
+
   dataElement.innerHTML = "";
   Util.readStorageFile(`accel.csv`,data=>{
-    Util.hideModal();
     console.log(data)
     csvContent+=data.trim();
 });
