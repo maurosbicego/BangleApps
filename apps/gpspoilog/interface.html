@@ -17,7 +17,7 @@ function getData() {
   Util.showModal("Loading...");
   // get the data
   dataElement.innerHTML = "";
-  Util.readStorageFile(`accel.csv`,data=>{
+  Util.readStorageFile(`gpspoilog.csv`,data=>{
     csvData = data.trim();
     // remove window
     Util.hideModal();
@@ -29,15 +29,19 @@ function getData() {
     // Otherwise parse the data and output it as a table
     dataElement.innerHTML = `<table>
     <tr>
-      <th>x</th>
-      <th>y</th>
-      <th>z</th>
+      <th>Time</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>Alt</th>
+      <th>Type</th>
     </tr>`+data.trim().split("\n").map(l=>{
       l = l.split(",");
       return `<tr>
-      <td>${l[0]}</td>
+      <td>${(new Date(l[0]*1000)).toLocaleString()}</td>
       <td>${l[1]}</td>
       <td>${l[2]}</td>
+      <td>${l[3]}</td>
+      <td>${l[4]}</td>
       </tr>`
     }).join("\n")+"</table>";
   });
