@@ -19,14 +19,8 @@ function getData() {
   // get the data
   dataElement.innerHTML = "";
   Util.readStorageFile(`accel.csv`,data=>{
-    csvData = data.trim();
-    // remove window
     Util.hideModal();
-    // If no data, report it and exit
-
-    data.trim().split("\n").forEach(l=>{
-      csvContent += l + "\n";
-    });
+    csvContent+=data.trim();
 });
 var encodedUri = encodeURI(csvContent);
 window.open(encodedUri);
