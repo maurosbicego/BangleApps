@@ -13,21 +13,14 @@ var dataElement = document.getElementById("data");
 var csvData = "";
 
 function getData() {
-  let csvContent = "data:text/csv;charset=utf-8,";
-
-  dataElement.innerHTML = "";
   Util.readStorageFile(`accel.csv`,data=>{
-    console.log(data)
-    csvContent+=data.trim();
+    csvdata = data.trim();
 });
-var encodedUri = encodeURI(csvContent);
-console.log(encodedUri)
-window.open(encodedUri);
 }
 
 // You can call a utility function to save the data
 document.getElementById("btnSave").addEventListener("click", function() {
-  Util.saveCSV("gpsdata", csvData);
+  Util.saveCSV("accel", csvData);
 });
 // Or you can also delete the file
 document.getElementById("btnDelete").addEventListener("click", function() {
