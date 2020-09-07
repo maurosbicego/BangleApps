@@ -13,6 +13,7 @@ var dataElement = document.getElementById("data");
 
 document.getElementById("btnSave").addEventListener("click", function() {
   Util.readStorageFile('accel.csv',data=>{
+    console.log(data.trim());
     Util.saveCSV("accel", data.trim());
 });
 });
