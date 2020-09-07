@@ -10,31 +10,20 @@
     <script src="../../lib/interface.js"></script>
     <script>
 var dataElement = document.getElementById("data");
-var csvData = "";
 
-function getData() {
-  Util.readStorageFile(`accel.csv`,data=>{
-    csvdata = data.trim();
-    console.log(csvdata);
-});
-}
-
-// You can call a utility function to save the data
 document.getElementById("btnSave").addEventListener("click", function() {
-  Util.saveCSV("accel", csvData);
+  Util.readStorageFile('accel.csv',data=>{
+    var csvdata = data.trim();
+    Util.saveCSV("accel", csvData);
 });
-// Or you can also delete the file
+});
 document.getElementById("btnDelete").addEventListener("click", function() {
   Util.showModal("Deleting...");
   Util.eraseStorageFile("accel.csv", function() {
     Util.hideModal();
-    getData();
   });
 });
-// Called when app starts
-function onInit() {
-  getData();
-}
+
 
     </script>
   </body>
