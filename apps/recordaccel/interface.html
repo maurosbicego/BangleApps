@@ -15,6 +15,7 @@ var csvData = "";
 function getData() {
   Util.readStorageFile(`accel.csv`,data=>{
     csvdata = data.trim();
+    console.log(csvdata);
 });
 }
 
