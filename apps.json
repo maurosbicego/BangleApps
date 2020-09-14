@@ -1981,5 +1981,17 @@
       {"name":"banglerow.app.js","url":"app.js"},
       {"name":"banglerow.img","url":"app-icon.js","evaluate":true}
     ]
+  },
+  { "id": "beat",
+    "name": "Beat",
+    "shortName":"Beat",
+    "icon": "beat.png",
+    "version":"1.0",
+    "description": "App to indicate rowing stroke durations. BTN 1 and 3 to increase / decrease stroke count. BTN 2 to change ratio",
+    "tags": "Tools",
+    "storage": [
+      {"name":"beat.app.js","url":"beat.js"},
+      {"name":"beat.img","url":"beat-icon.js","evaluate":true}
+    ]
   }
 ]
