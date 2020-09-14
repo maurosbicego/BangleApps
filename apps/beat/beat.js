@@ -1,5 +1,5 @@
 var sz = 18;
-var ratios = [2/3, 3/4, 1/2, 3/5];
+var ratios = [1/3, 1/4, 2/5, 2/3, 3/4, 1/2, 3/5];
 var ratioid = 0;
 var ratio = ratios[ratioid];
 var duration = 60/sz;
